@@ -105,7 +105,7 @@ main{
     width:10px;
     height:10px;
     border-radius: 50%;
-    background: #e7d9a9;
+    background: #e3d29c;
         /*丸の動き1.6秒かけて透過し、永遠にループ*/
     animation:
         circlemove 1.6s ease-in-out infinite,
@@ -154,8 +154,17 @@ main{
     margin: 0 auto;
 }
 
-/* 記事一覧 */
-.changeCard ul {
+/*========= archive・single ===============*/
+.archive{
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 0 3%
+}
+.archive h1{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.change-card ul {
     padding: 0;
     list-style: none;
     border: none;
@@ -163,26 +172,50 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.changeItemTxt {
-    width: 62%;
+.change-news-txt {
+    width: 100%;
 }
-.changeItemTxt p.itemTitle {
+.change-news-txt p.news-title {
     font-size: 1rem;
     line-height: 1.56;
     margin: 0;
-    font-weight: bold;
+    font-weight: 500;
     color: #313131;
     margin-bottom: 10px;
 }
+h2.news-title{
+    font-size: 1.5rem;
+    line-height: 1.56;
+    margin: 30px 0;
+    font-weight: 500;
+    color: #313131;
+}
+
+/*========= 404 ===============*/
+.error__fv{
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.error__fv img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.error{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
 
 /* List */
-li.changeItem.defaultList {
+li.change-news.default-list {
     width: 100%;
-    padding: 0;
 }
-li.changeItem.defaultList a {
+li.change-news.default-list a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -198,10 +231,10 @@ li.changeItem.defaultList a {
     padding-right: 10px;
     cursor: pointer;
 }
-li.changeItem.defaultList:last-child a {
+li.change-news.default-list:last-child a {
     border-bottom: solid 1px #EEE;
 }
-li.changeItem.defaultList a:hover {
+li.change-news.default-list a:hover {
     background: #fafafa92;
 }
 
@@ -298,7 +331,6 @@ li.changeItem.defaultList a:hover {
     margin-left: calc(var(--wave-w) * 0.75);
     border-radius: 100px 100px 0 0;
     box-sizing: border-box;
-/*  border: solid 2px #696969; */
     border-bottom: 0;
     overflow: hidden;
     background: #f8f4e6;
@@ -454,30 +486,6 @@ li.changeItem.defaultList a:hover {
     z-index: -1;
 }
 
-/*========= 404 ===============*/
-.error__page{
-    margin: 30px auto;
-    max-width: 800px;
-    padding: 0 3%
-}
-
-.error__fv img{
-    border-radius: 50px;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    object-fit: cover;
-}
-
-.error__page p{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-}
-
-
-
-
 @media screen and (max-width: 810px) {
 /*========= header ===============*/
 .header__container .header__logo img{
@@ -557,6 +565,11 @@ li.changeItem.defaultList a .changeItemTxt {
     text-align: center;
 }
 
+.archive h1{
+    width: 200px;
+    margin: 0 auto;
+}
+
 /*========= concept ===============*/
 .concept img{
     width: 100%;
@@ -565,6 +578,8 @@ li.changeItem.defaultList a .changeItemTxt {
 }
 .concept{
     display: block;
+    margin-top: 100px;
+    padding-top: 0;
 }
 .concept__container {
     margin: 50px 35px;
@@ -638,8 +653,14 @@ li.changeItem.defaultList a .changeItemTxt {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0 auto 70px;
+    margin:0 auto 30px;
 }
+
+.contact a{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .footer__box{
     display: block;
 }
@@ -654,18 +675,14 @@ li.changeItem.defaultList a .changeItemTxt {
     margin-top: 70px;
 }
 
-.footer__box li{
+.footer__box nav li{
     width: 200px;
     text-align: center;
     margin: 30px auto;
 }
 
-.footer__box li:last-child{
-    margin-bottom: 70px;
-}
-
 .footer__wrapper .copyright{
-    margin: 100px 0 10px 0;
+    margin: 150px 0 10px 0;
     font-size: 10px;
 }
 

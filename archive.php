@@ -1,29 +1,27 @@
 <?php get_header(); ?>
 
-<img src="<?=get_template_directory_uri(); ?>/images/archive.jpeg" alt="">
-
-<?php
-    $args = array(
-        'post_type' => 'news',// 表示したい投稿タイプ
-        'posts_per_page' => 10,// 表示する記事数
-    );
-    $news_query = new WP_Query($args);
-    if ( $news_query->have_posts() ):
-        while ( $news_query->have_posts() ):
-            $news_query->the_post();
-?>
-<!-- 今回はタイトルの表示 -->
-
-<article>
-    <h2>
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </h2>
-</article>
-<?php
-        endwhile;
-    endif;
-    wp_reset_postdata();
-?>
+<main class="archive">
+    <h1>
+        <img src="<?=get_template_directory_uri(); ?>/images/news & diary.svg" alt="ニュース、お知らせ">
+    </h1>
+    <article class="change-card">
+        <ul>
+            <?php query_posts("posts_per_page=10"); ?>
+            <?php if( have_posts() ):
+                while( have_posts() ) : the_post(); ?>
+                    <li class="change-news default-list">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="change-news-txt">
+                                <time><?=get_the_date();?></time>
+                                <p class="news-title"><?php the_title() ?></p>
+                            </div>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
+            <?php endif; wp_reset_postdata();?>
+        </ul>
+    </article>
+</main>
 
 <?php get_footer(); ?>
 

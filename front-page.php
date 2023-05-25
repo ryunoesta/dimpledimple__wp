@@ -27,22 +27,25 @@
         <h3>
             <img src="<?=get_template_directory_uri(); ?>/images/news & diary.svg" alt="ニュース、お知らせ">
         </h3>
-        <div class="changeCard">
-            <?php if( have_posts() ):
-                while( have_posts() ) : the_post(); ?>
-                    <article class="changeItem defaultList">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="changeItemTxt">
-                                <time class="pubdate sng-link-time dfont" itemprop="datePublished"><?=get_the_date();?></time>
-                                <h3 class="itemTitle"><?php the_title() ?></h3>
-                            </div>
-                        </a>
-                    </article>
-                <?php endwhile; ?>
-            <?php endif; wp_reset_postdata();?>
-        </div>
+        <article class="change-card">
+            <ul>
+                <?php query_posts('posts_per_page=3'); ?>
+                <?php if( have_posts() ):
+                    while( have_posts() ) : the_post(); ?>
+                        <li class="change-news default-list">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="change-news-txt">
+                                    <time><?=get_the_date();?></time>
+                                    <p class="news-title"><?php the_title() ?></p>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata();?>
+            </ul>
+        </article>
 
-        <a class="button" href="<?= home_url('/archive');  ?>">
+        <a class="button" href="http://localhost/dimpledimple_wordpress/news">
             全ての記事へ <span>＞</span>
         </a>
 
