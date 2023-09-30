@@ -3,7 +3,7 @@
 
 --- 
 
-![スクリーンショット](https://github.com/ryunoesta/event-manager/assets/87493072/19c3f851-8523-46d0-883b-5cddddfbf0fb)
+![スクリーンショット](https://github.com/ryunoesta/dimpledimple__wp/assets/87493072/a782b4da-39d1-4551-af2c-9a3ae006b800")
 
 --- 
 
