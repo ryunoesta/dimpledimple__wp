@@ -63,7 +63,7 @@ main{
 
 .fv__img img {
     object-fit: cover;
-    border-radius: 38% 45% 47% 49%;
+    border-radius: 50%;
 }
 
 .tea {

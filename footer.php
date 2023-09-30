@@ -1,9 +1,9 @@
 <footer>
     <div class="wavy-line-upper">
-        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
     <div class="wavy-line-downer">
-        <div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
     <div class="blank"></div>
     <div class="footer__container">
@@ -25,9 +25,9 @@
 
                     <div class="contact">
                         <div>
-                            <a href="">LINEから予約</a>
+                            <a href="https://lin.ee/KSdgG7w">LINEから予約</a>
                         </div>
-                        <a href=""><img src="<?=get_template_directory_uri(); ?>/images/line.svg" alt=""></a>
+                        <a href="https://lin.ee/KSdgG7w"><img src="<?=get_template_directory_uri(); ?>/images/line.svg" alt=""></a>
                     </div>
 
                     <div class="contact">

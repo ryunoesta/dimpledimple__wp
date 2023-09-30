@@ -6,7 +6,7 @@
     </h1>
     <article>
         <?php while (have_posts()) : the_post(); ?>
-            <time><?=get_the_date();?></time>
+            <time><?=get_the_date('Y年m月d日');?></time>
             <h2 class="news-title"><?php the_title(); ?></h2>
             <p class="news-content"><?php the_content(); ?></p>
         <?php endwhile; ?>

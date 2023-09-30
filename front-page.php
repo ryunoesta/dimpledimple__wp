@@ -35,7 +35,7 @@
                         <li class="change-news default-list">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="change-news-txt">
-                                    <time><?=get_the_date();?></time>
+                                    <time><?=get_the_date('Y年m月d日');?></time>
                                     <p class="news-title"><?php the_title() ?></p>
                                 </div>
                             </a>
@@ -45,7 +45,7 @@
             </ul>
         </article>
 
-        <a class="button" href="http://localhost/dimpledimple_wordpress/news">
+        <a class="button" href="<?=get_category_link(2); ?>">
             全ての記事へ <span>＞</span>
         </a>
 

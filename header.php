@@ -4,6 +4,7 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/script.js" defer></script>
     <title>dimple dimple</title>
     <?php wp_head(); ?>
 </head>
@@ -18,7 +19,7 @@
                 </a>
             </h1>
 			<div class="header__line pc">
-                <a href="">
+                <a href="https://lin.ee/KSdgG7w">
                     <div class="object-2 pc"></div>
                     <div>LINEからご予約</div>
                 </a>
